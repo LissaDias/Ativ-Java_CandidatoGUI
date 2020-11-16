@@ -134,7 +134,8 @@ public class CandidatoGUI extends JFrame {
 		public void limpar() {
 			txtCpf.setText("");
 			txtNome.setText("");
-			// COMO LIMPAR O JRADIUM BUTTON?
+			gb.clearSelection();
+			
 		}
 		/**
 		* Handler
@@ -152,8 +153,8 @@ public class CandidatoGUI extends JFrame {
 							String Nome = txtNome.getText();
 							// COMO PEGAR SELEÇÃO JRADIUN BUTTON?
 							
-							// COMO CONFERIR SELEÇÃO JRADIUN BUTTON?
-							if((Cpf.contentEquals("")) || (Nome.contentEquals(""))) {
+							
+							if((Cpf.contentEquals("")) || (Nome.contentEquals("")) || (gb.isSelected(null))) {
 								JOptionPane.showMessageDialog(getContentPane(), "Todos os campos devem ser preenchidos", "Atenção", 2, null);
 							}
 							else {
